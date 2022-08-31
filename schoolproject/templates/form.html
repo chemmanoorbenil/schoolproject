@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<h2>FORM</h2>
+<form action="form" method="post"  >
+    {% csrf_token %}
+<input  type="text" name="username" placeholder="enter user name"><br>
+<input type="date" name="date_of_birth" placeholder="enter your date of birth"><br>
+<input type="number" name="age" placeholder="enter your age"><br>
+ <input type="radio" name="gender"> male
+ <input type="radio" name="gender">female<br>
+  <input type="number" name="phone number" placeholder="enter your phone number"><br>
+    <input type="email" name="email" placeholder="enter your mail id"><br>
+    <input  type="text" name="address" placeholder="enter address"><br>
+     <label> DEPARTMENT </label>
+<select>
+<option value = ""> Computer science
+</option>
+<option value = ""> Commerce
+</option>
+<option value = ""> Biomathes
+</option>
+<option value = "">humanities
+</option>
+<option value = "">Biology science
+</select><br>
+
+
+     <label> COURSES </label>
+<select>
+<option value = ""> BBA
+</option>
+<option value = "">BCOM
+</option>
+<option value = ""> BCA
+</option>
+<option value = "">MCOM
+</option>
+<option value = "">MCA
+
+</select><br>
+
+   <label> SELECT YOUR NEEDFUL MATERIAL  </label>
+
+</select><br>
+<input type="checkbox"> EXAM PAPPER
+<input type="checkbox"> PEN
+<input type="checkbox"> pencil
+<input type="checkbox"> scale
+<input type="checkbox"> rebber<br>
+
+<input  type="submit"><br>
+
+    <a href="{% url 'schoolapp:department' %}" class="btn btn-primary btn-block my_custom_button">home</a>
+</form>
+</body>
+</html>
